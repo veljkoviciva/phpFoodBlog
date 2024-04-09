@@ -33,9 +33,9 @@
             <span style="color: white;">Prijava</span> <!-- izmeniti kada je sesija aktivna da bude ime korisnika i kuca icon -->
           </a>
           <ul class="dropdown-menu dropdown-menu-end" style="color: white; background-color: royalblue;">
-            <?php if (!isset($_SESSION)) { ?>
+            <?php if (!isset($_SESSION) || !isset($_SESSION['userID'])) { ?>
               <li><a class="dropdown-item" href="login.php"><span style="color: white;">Login</span></a></li>
-              <li><a class="dropdown-item" href="#"><span style="color: white;">Signup</span></a></li>
+              <li><a class="dropdown-item" href="signup.php"><span style="color: white;">Signup</span></a></li>
             <?php } else { ?>
               <li><a class="dropdown-item" href="home.php"><span style="color: white;">Moji recepti</span></a></li>
               <li><a class="dropdown-item" href="#"><span style="color: white;">Sačuvani recepti</span></a></li>

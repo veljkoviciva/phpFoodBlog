@@ -8,6 +8,7 @@ $username = $_POST['username'] ?? "Anonimus";
 $password = $_POST['userPassword'] ?? "";
 
 // echo $username . " " . $password;
+$password = sha1($password . "php2024"); //pass sa dodatkom
 
 $stmt = $conn->prepare("select * from users where username = ? and password=?");
 $stmt->bind_param("ss", $username, $password);

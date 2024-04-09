@@ -1,11 +1,9 @@
- // Initialize the toast
- var myToast = document.getElementById('myToast');
- var toast = new bootstrap.Toast(myToast);
-
- // Show the toast on button click
- var toastButton = document.getElementById('toastButton');
- toastButton.addEventListener('click', function() {
-   toast.show();
- });
-
-
+function displayResetPassword() {
+  var x = document.getElementById("divResetPassword");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+  else {
+    x.style.display = "none";
+  }
+}
